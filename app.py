@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for, request, jsonify
 from flask_mysqldb import MySQL
-app = Flask(__name__)
+app = Flask(__name__)   
 app.config['MYSQL_HOST'] = 'ec2-34-227-120-79.compute-1.amazonaws.com'
 app.config['MYSQL_USER'] = 'xxbafeigeplqzf'
 app.config['MYSQL_PASSWORD'] = '292103424cc1246aebe3a724ba93b366f7bcb06ae9d2c700b1cfd305b03e6d80'
@@ -17,5 +17,5 @@ def index():
     return(data)
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=5432)
 

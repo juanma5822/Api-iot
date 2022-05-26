@@ -8,10 +8,15 @@ app.config['MYSQL_DB'] = 'd4reu6rdlo91uc'
 app.config['MYSQL_PORT']= 5432
 mysql = MySQL(app)
 
+@app.route("/")
+def Home():
+    return 'desplegado'
+
+
 @app.route("/getData")
 def index():
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM database")
+    cur.execute("SELECT * FROM d4reu6rdlo91uc ")
     data = cur.fetchall()
     cur.close()
     return(data)
